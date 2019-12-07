@@ -30,6 +30,7 @@ module.exports = {
         }
       }
     ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "array-bracket-spacing": [2, "never"],
     "object-curly-spacing": ["error", "always"],
     "jsx-a11y/no-static-element-interactions": 0,
