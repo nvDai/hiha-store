@@ -31,6 +31,9 @@ module.exports = {
       }
     ],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/destructuring-assignment": 0,
+    "react/button-has-type": 0,
+    "jsx-a11y/label-has-associated-control": 0,
     "array-bracket-spacing": [2, "never"],
     "object-curly-spacing": ["error", "always"],
     "jsx-a11y/no-static-element-interactions": 0,
