@@ -3,11 +3,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: ["plugin:react/recommended", "airbnb"],
-  globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
-  },
+  extends: ["react-app", "prettier"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -15,30 +11,18 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react"],
+  plugins: ["react", "prettier"],
   rules: {
-    semi: [2, "never"],
-    quotes: ["error", "single", { avoidEscape: true }],
-    "react/jsx-props-no-spreading": 0,
-    "react/jsx-curly-spacing": [
-      2,
+    "prettier/prettier": [
+      "error",
       {
-        when: "always",
-        children: true,
-        spacing: {
-          objectLiterals: "never"
-        }
+        printWidth: 80,
+        trailingComma: "es5",
+        semi: false,
+        jsxSingleQuote: true,
+        singleQuote: true,
+        useTabs: true
       }
-    ],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/destructuring-assignment": 0,
-    "react/button-has-type": 0,
-    "jsx-a11y/label-has-associated-control": 0,
-    "array-bracket-spacing": [2, "never"],
-    "object-curly-spacing": ["error", "always"],
-    "jsx-a11y/no-static-element-interactions": 0,
-    "react/prop-types": 0,
-    "max-len": [1, 80],
-    "max-statements": [1, 15]
+    ]
   }
 };
