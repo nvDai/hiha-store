@@ -17,6 +17,12 @@
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
+
+    .empty-message {
+      font-size: inherit;
+      display: flex;
+      align-self: center;
+    }
   }
 
   button {
