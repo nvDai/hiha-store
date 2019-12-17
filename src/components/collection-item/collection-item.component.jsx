@@ -5,7 +5,7 @@ import { createStructuredSelector } from 'reselect'
 import { connect } from 'react-redux'
 
 import CustomButton from '../custom-button/custom-button.component'
-import { addItem, toggleCart } from 'redux/cart/cart.action'
+import { addItem } from 'redux/cart/cart.actions'
 import { selectCartHidden } from 'redux/cart/cart.selectors'
 
 import './collection-item.styles.scss'
@@ -27,9 +27,6 @@ const CollectionItem = ({ item, addItem, toggleCart, hidden }) => {
 			<CustomButton
 				onClick={() => {
 					addItem(item)
-					if (hidden) {
-						toggleCart()
-					}
 				}}
 			>
 				Add to cart
@@ -44,7 +41,6 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => ({
 	addItem: item => dispatch(addItem(item)),
-	toggleCart: () => dispatch(toggleCart()),
 })
 
 CollectionItem.propsTypes = {
