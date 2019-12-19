@@ -71,6 +71,7 @@ export function* signUp({ payload: { email, password, displayName } }) {
 		yield put(signUpSuccess({ user, additionalData: { displayName } }))
 	} catch (error) {
 		yield put(signUpFailure())
+		yield alert(error.message)
 	}
 }
 

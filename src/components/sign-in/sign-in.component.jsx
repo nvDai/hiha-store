@@ -59,6 +59,7 @@ const SignIn = ({ emailSigInStart, googleSigInStart }) => {
 					</CustomButton>
 				</div>
 			</form>
+			<div></div>
 		</div>
 	)
 }

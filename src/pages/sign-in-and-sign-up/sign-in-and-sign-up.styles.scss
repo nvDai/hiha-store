@@ -1,6 +1,40 @@
 .sign-in-and-sign-up {
-  width: 850px;
+  position: relative;
+  width: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 30px auto;
+
+  .tab {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    
+    span {
+      font-size: 1.2em;
+      opacity: 0.5;
+      font-weight: 600;
+    }
+
+    .active {
+      opacity: 1;
+      font-weight: 700;
+    }
+  }
+  
+
+  .container {
+    margin-top: 24px;
+  }
+
+  @media screen and (max-width: 767px){
+    // width: 100%;
+    // flex-direction: column;
+    
+
+    // .hidden-component {
+    //   display: none;
+    // }
+  }
 }
+

@@ -27,4 +27,21 @@
   button {
     margin-top: auto;
   }
+
+  @media screen and (max-width: 767px) {
+    width: 100vw;
+    right: -12px;
+    height: calc(100vh - 82px);
+    top: 70px;
+
+    .cart-items {
+      height: calc(100%);
+      margin-bottom: 12px;
+
+      .cart-item {
+        height: auto;
+      }
+    }
+
+  }
 }

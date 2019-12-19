@@ -34,4 +34,17 @@
     color: red;
     text-align: center;
   }
+
+  @media screen and (max-width: 767px) {
+    width: auto;
+    margin: 0;
+
+    .checkout-header {
+      .header-block  {
+        &:last-child {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
 }
