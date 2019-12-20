@@ -28,13 +28,12 @@
   }
 
   @media screen and (max-width: 767px){
-    // width: 100%;
-    // flex-direction: column;
-    
-
-    // .hidden-component {
-    //   display: none;
-    // }
+    .container {
+      width: 100%;
+    }
+    .sign-in, .sign-up {
+      width: 100%;
+    }
   }
 }
 
