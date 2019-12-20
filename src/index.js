@@ -20,8 +20,4 @@ const Root = () => (
 	</Provider>
 )
 
-if (rootElement.hasChildNodes()) {
-	ReactDOM.hydrate(<Root />, rootElement)
-} else {
-	ReactDOM.render(<Root />, rootElement)
-}
+ReactDOM.render(<Root />, rootElement)
