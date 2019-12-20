@@ -9,6 +9,7 @@ import Spinner from './components/spinner/spinner.component'
 import ErrorBoundary from './components/error-boundary/error-boundary.component'
 
 import { selectCurrentUser } from 'redux/user/user.selectors'
+import { selectCartHidden } from './redux/cart/cart.selectors'
 import { checkUserSession } from './redux/user/user.actions'
 import { hideCart } from './redux/cart/cart.actions'
 
@@ -31,7 +32,10 @@ class App extends React.Component {
 		}
 	}
 	onRouteChanged() {
-		this.props.hideCart()
+		const { cartHidden, hideCart } = this.props
+		if (!cartHidden) {
+			hideCart()
+		}
 	}
 	render() {
 		const { currentUser } = this.props
@@ -61,6 +65,7 @@ class App extends React.Component {
 
 const mapStateToProps = createStructuredSelector({
 	currentUser: selectCurrentUser,
+	cartHidden: selectCartHidden,
 })
 
 const mapDispatchToProps = dispatch => ({
