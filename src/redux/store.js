@@ -10,7 +10,6 @@ import rootSaga from './root-saga'
 const sagaMiddleware = createSagaMiddleware()
 
 const middleware = [sagaMiddleware]
-console.log(process.env.NODE_ENV)
 
 if (process.env.NODE_ENV === 'development') {
 	middleware.push(logger)
