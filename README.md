@@ -1,4 +1,5 @@
 ## HiHa Store
+Link to the app: http://hiha-store.herokuapp.com/
 ### Descriptions
 This app is my next React app in my React Journey. The reasons I want to build this app are:
 - Relearning React stacks: React, React-router, Redux, Redux-saga, React Hooks
