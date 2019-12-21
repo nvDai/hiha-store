@@ -55,6 +55,14 @@ export const convertCollectionsSnapshotToMap = snapshot => {
 	}, {})
 }
 
+export const convertSectionsSnapshotToMap = snapshot => {
+	const transformCollection = snapshot.docs.map(doc => doc.data())
+	return transformCollection.reduce((accumulator, collection) => {
+		accumulator[collection.title.toLowerCase()] = collection
+		return accumulator
+	}, {})
+}
+
 export const getCurrentUser = () => {
 	return new Promise((resolve, reject) => {
 		const unsubscribe = auth.onAuthStateChanged(userAuth => {

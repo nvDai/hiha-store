@@ -9,8 +9,8 @@
   .image {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    object-position: top;
     margin-bottom: 5px;
     transition: all 0.2s ease-in;
   }
@@ -81,6 +81,10 @@
 
       .collection-footer .price {
         width: auto;
+      }
+
+      .image {
+        height: 75%;
       }
 
       &:hover {

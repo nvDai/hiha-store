@@ -4,8 +4,7 @@ import { createStructuredSelector } from 'reselect'
 import { connect } from 'react-redux'
 
 import CustomButton from '../custom-button/custom-button.component'
-import LazyloadImage from '../lazyload-image/lazyload-image.component'
-import Placeholder from '../placeholder/placeholder.component'
+import LazyImage from '../lazy-image/lazy-image.component'
 
 import { addItem } from 'redux/cart/cart.actions'
 import { selectCartHidden } from 'redux/cart/cart.selectors'
@@ -16,20 +15,12 @@ const CollectionItem = ({ item, addItem }) => {
 	const { name, price, imageUrl } = item
 	return (
 		<div className='collection-item'>
-			<LazyloadImage
-				once
-				throttle={500}
-				height={260}
-				offset={260}
-				placeholder={<Placeholder />}
-			>
-				<div
-					className='image'
-					style={{
-						backgroundImage: `url(${imageUrl})`,
-					}}
-				/>
-			</LazyloadImage>
+			<LazyImage
+				placeHolder={`${imageUrl}?tr=bl-30,q-50`}
+				src={imageUrl}
+				alt={name}
+				className='image'
+			/>
 			<div className='collection-footer'>
 				<span className='name'>{name}</span>
 				<span className='price'>${price}</span>
