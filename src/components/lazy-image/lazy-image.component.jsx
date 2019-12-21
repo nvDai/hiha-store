@@ -57,6 +57,7 @@ class LazyImage extends React.Component {
 				ref={imgElm => (this.imgElm = imgElm)}
 				className={`${className}`}
 				alt={alt}
+				sizes='80vw'
 			/>
 		)
 	}
