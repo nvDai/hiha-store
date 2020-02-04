@@ -9,7 +9,7 @@ import {
 
 import './checkout-item.styles.scss'
 
-const CheckoutItem = ({
+export const CheckoutItem = ({
 	item: { id, name, imageUrl, price, quantity },
 	clearItemFromCart,
 	addItem,
@@ -21,11 +21,15 @@ const CheckoutItem = ({
 		</div>
 		<span className='name'>{name}</span>
 		<div className='quantity'>
-			<div className='arrow' onClick={() => removeItem({ id })}>
+			<div
+				id='decrease-btn'
+				className='arrow'
+				onClick={() => removeItem({ id })}
+			>
 				&#10094;
 			</div>
 			<span className='value'>{quantity}</span>
-			<div className='arrow' onClick={() => addItem({ id })}>
+			<div id='increase-btn' className='arrow' onClick={() => addItem({ id })}>
 				&#10095;
 			</div>
 		</div>

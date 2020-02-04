@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem should render without crashing 1`] = `
+<div
+  className="cart-item"
+>
+  <img
+    alt="items"
+    src=""
+  />
+  <div
+    className="item-details"
+  >
+    <span
+      className="name"
+    />
+    <span
+      className="price"
+    >
+       x $
+    </span>
+  </div>
+</div>
+`;

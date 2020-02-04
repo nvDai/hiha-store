@@ -48,7 +48,6 @@ describe('CartDropdown', () => {
 
 	it('should render empty message', () => {
 		expect(wrapper.find('.empty-message').length).toEqual(1)
-		// expect(wrapper1.find('CustomButton').length).toEqual(1)
 	})
 
 	describe('CustomButton', () => {

@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutItem should render without crashing 1`] = `
+<div
+  className="checkout-item"
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="cart item"
+      src="image.jpeg"
+    />
+  </div>
+  <span
+    className="name"
+  >
+    T shirt
+  </span>
+  <div
+    className="quantity"
+  >
+    <div
+      className="arrow"
+      id="decrease-btn"
+      onClick={[Function]}
+    >
+      ❮
+    </div>
+    <span
+      className="value"
+    >
+      0
+    </span>
+    <div
+      className="arrow"
+      id="increase-btn"
+      onClick={[Function]}
+    >
+      ❯
+    </div>
+  </div>
+  <span
+    className="price"
+  >
+    $ 
+    0
+  </span>
+  <div
+    className="remove-button"
+    onClick={[Function]}
+  >
+    ✕
+  </div>
+</div>
+`;
