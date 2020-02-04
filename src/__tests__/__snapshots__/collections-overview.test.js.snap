@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionOverview should render without crashing 1`] = `
+<div
+  className="collection-overview"
+>
+  <withRouter(CollectionPreview)
+    imageUrl="https://ik.imagekit.io/fireman35/images/0s3pdnc/adidas-nmd.png"
+    key="10"
+    name="Adidas NMD"
+    price={220}
+  />
+</div>
+`;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionItem should render without crashing 1`] = `
+<div
+  className="collection-item"
+>
+  <LazyImage
+    alt="Shirt"
+    className="image"
+    placeHolder="shirt.jpg?tr=bl-30,q-50"
+    src="shirt.jpg"
+  />
+  <div
+    className="collection-footer"
+  >
+    <span
+      className="name"
+    >
+      Shirt
+    </span>
+    <span
+      className="price"
+    >
+      $
+      0
+    </span>
+  </div>
+  <CustomButton
+    onClick={[Function]}
+  >
+    Add to cart
+  </CustomButton>
+</div>
+`;

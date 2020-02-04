@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Directory should render without crashing 1`] = `
+<div
+  className="directory-menu"
+>
+  <withRouter(MenuItem)
+    imageUrl="https://ik.imagekit.io/fireman35/images/cvpntL1/hats.png"
+    key="1"
+    linkUrl="shop/hats"
+    title="hats"
+  />
+  <withRouter(MenuItem)
+    imageUrl="https://ik.imagekit.io/fireman35/images/px2tCc3/jackets.png"
+    key="2"
+    linkUrl="shop/jackets"
+    title="jackets"
+  />
+  <withRouter(MenuItem)
+    imageUrl="https://ik.imagekit.io/fireman35/images/0jqHpnp/sneakers.png"
+    key="3"
+    linkUrl="shop/sneakers"
+    title="sneakers"
+  />
+  <withRouter(MenuItem)
+    imageUrl="https://ik.imagekit.io/fireman35/images/GCCdy8t/womens.png"
+    key="4"
+    linkUrl="shop/womens"
+    size="large"
+    title="womens"
+  />
+  <withRouter(MenuItem)
+    imageUrl="https://ik.imagekit.io/fireman35/images/R70vBrQ/men.png"
+    key="5"
+    linkUrl="shop/mens"
+    size="large"
+    title="mens"
+  />
+</div>
+`;

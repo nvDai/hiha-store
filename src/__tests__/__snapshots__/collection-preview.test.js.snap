@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionPreview should render without crashing 1`] = `
+<div
+  className="collection-preview"
+>
+  <Link
+    className="title"
+    to="undefined/collectionpreview"
+  >
+    COLLECTIONPREVIEW
+  </Link>
+  <div
+    className="preview"
+  />
+</div>
+`;
