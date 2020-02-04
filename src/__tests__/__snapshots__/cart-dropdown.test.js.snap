@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartDropdown should render without crashing 1`] = `
+<div
+  className="cart-dropdown"
+>
+  <div
+    className="cart-items"
+  >
+    <span
+      className="empty-message"
+    >
+      Your cart is empty
+    </span>
+  </div>
+  <CustomButton
+    onClick={[MockFunction]}
+  >
+    GO TO CHECKOUT
+  </CustomButton>
+</div>
+`;
