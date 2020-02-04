@@ -2,7 +2,6 @@ import React from 'react'
 
 import CustomButton from '../custom-button/custom-button.component'
 import CartItem from '../cart-item/cart-item.component'
-import { hideCart as onHideCart } from 'redux/cart/cart.actions'
 
 import './cart-dropdown.styles.scss'
 
