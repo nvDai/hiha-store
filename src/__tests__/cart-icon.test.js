@@ -12,7 +12,6 @@ describe('CartIcon', () => {
 			itemCount: 0,
 		}
 		const wrapper = shallow(<CartIcon {...props} />)
-
 		expect(toJson(wrapper)).toMatchSnapshot()
 	})
 })
