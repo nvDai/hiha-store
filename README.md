@@ -7,7 +7,7 @@ This app is my next React app in my React Journey. The reasons I want to build t
 - Learning how to config a React app with Eslint + Prettier
 - Learning Firebase to make User Authentication and store data in Firestore<br>
 ### Things I wish to do to improve app performance:
-- Writing Unit test with Jest
+- Writing Unit test with Jest (implement 50% unit tests)
 - Optimizing JS chunk more
 - Building my own server to improve app performance by using HTTPS, server caching <br>
 ### If you are interested in my project you can clone my repo by following steps:
