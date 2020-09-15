@@ -14,14 +14,14 @@ const SignInAndSignUpPage = () => {
 					className={`${currentTab === 'sign-in' ? 'active' : ''}`}
 					onClick={() => setCurrentTab('sign-in')}
 				>
-					Đăng nhập
+					Sign In
 				</span>{' '}
 				|{' '}
 				<span
 					className={`${currentTab === 'sign-up' ? 'active' : ''}`}
 					onClick={() => setCurrentTab('sign-up')}
 				>
-					Đăng ký
+					Sign Up
 				</span>
 			</div>
 			<div className='container'>
