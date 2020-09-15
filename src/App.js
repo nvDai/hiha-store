@@ -18,59 +18,60 @@ import './App.scss'
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'))
 const ShopPage = lazy(() => import('./pages/shop/shop.component'))
 const SignInAndSignUpPage = lazy(() =>
-	import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component')
+  import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'),
 )
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'))
+const ContactPage = lazy(() => import('./pages/contact/contact.component'))
 
 class App extends React.Component {
-	componentDidMount() {
-		this.props.checkUserSession()
-	}
-	componentDidUpdate(prevProps) {
-		if (this.props.location !== prevProps.location) {
-			this.onRouteChanged()
-		}
-	}
-	onRouteChanged() {
-		const { cartHidden, hideCart } = this.props
-		if (!cartHidden) {
-			hideCart()
-		}
-	}
-	render() {
-		const { currentUser } = this.props
-		return (
-			<div className='app'>
-				<Header />
-				<Switch>
-					<ErrorBoundary>
-						<Suspense fallback={<Spinner />}>
-							<Route exact path='/' component={HomePage} />
-
-							<Route path='/shop' component={ShopPage} />
-							<Route exact path='/checkout' component={CheckoutPage} />
-							<Route
-								path='/sign-in'
-								render={() =>
-									currentUser ? <Redirect to='/' /> : <SignInAndSignUpPage />
-								}
-							/>
-						</Suspense>
-					</ErrorBoundary>
-				</Switch>
-			</div>
-		)
-	}
+  componentDidMount() {
+    this.props.checkUserSession()
+  }
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.onRouteChanged()
+    }
+  }
+  onRouteChanged() {
+    const { cartHidden, hideCart } = this.props
+    if (!cartHidden) {
+      hideCart()
+    }
+  }
+  render() {
+    const { currentUser } = this.props
+    return (
+      <div className='app'>
+        <Header />
+        <Switch>
+          <ErrorBoundary>
+            <Suspense fallback={<Spinner />}>
+              <Route exact path='/' component={HomePage} />
+              <Route path='/shop' component={ShopPage} />
+              <Route path='/contact' component={ContactPage} />
+              <Route path='/checkout' component={CheckoutPage} />
+              <Route
+                path='/sign-in'
+                render={() =>
+                  currentUser ? <Redirect to='/' /> : <SignInAndSignUpPage />
+                }
+              />
+            </Suspense>
+          </ErrorBoundary>
+        </Switch>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = createStructuredSelector({
-	currentUser: selectCurrentUser,
-	cartHidden: selectCartHidden,
+  currentUser: selectCurrentUser,
+  cartHidden: selectCartHidden,
 })
 
-const mapDispatchToProps = dispatch => ({
-	checkUserSession: () => dispatch(checkUserSession()),
-	hideCart: () => dispatch(hideCart()),
+const mapDispatchToProps = (dispatch) => ({
+  checkUserSession: () => dispatch(checkUserSession()),
+  hideCart: () => dispatch(hideCart()),
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
